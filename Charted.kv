@@ -1,0 +1,80 @@
+<PertBoard>:
+	orientation: 'vertical'
+	size_hint: 1, 1
+	anchor_x: 'center'
+	anchor_y: 'center'
+	Label:
+		text: 'This is where PERT is'
+	PertWidget
+	
+<GanttBoard>:
+	orientation: 'vertical'
+	size_hint: 1, 1
+	anchor_x: 'center'
+	anchor_y: 'center'
+	Label:
+		text: 'This is where GANTT is'
+
+<WbtBoard>:
+	orientation: 'vertical'
+	size_hint: 1, 1
+	anchor_x: 'center'
+	anchor_y: 'center'
+	Label:
+		text: 'This is where WBT is'
+
+<DataInput>
+	title: 'Add Task'
+	size: 300, 300
+	size_hint: None, None
+	Button:
+		id: addOk
+		text: 'Add'
+
+<MainWindow>:
+	orientation: 'vertical'
+	Label:
+		id: menuBar
+		text: 'Menu bar here'
+		font_size: 32
+		color: 1, 1, 1, 1
+		size_hint: 1, .1
+
+	Button:
+		id: addButton
+		text: 'Open'
+		font_size: 22
+		size_hint: .1, .1
+
+	Button:
+		id: addButton
+		text: 'Save'
+		font_size: 22
+		size_hint: .1, .1
+
+	Button:
+		id: addButton
+		text: 'Add'
+		font_size: 22
+		size_hint: .1, .1
+		on_press: root.addPressed()
+
+	TabbedPanel:
+		id: workspaceTabPanel
+		do_default_tab: False
+		size_hint: 1, 1
+
+		TabbedPanelItem:
+	        text: 'GANTT'
+	        GanttBoard
+
+	    TabbedPanelItem:
+			disabled: True
+	        text: 'PERT'
+	        PertBoard
+
+
+	    TabbedPanelItem:
+	    	disabled: True
+	        text: 'WBT'
+	        WbtBoard
