@@ -28,16 +28,16 @@ class WbtBoard(AnchorLayout):
 class DataInput(Popup):
 	pass
 
+class Dummy(Ellipse):
+	pass
 
-class PertWidget(Widget):
-	isSelected = False
-	def on_touch_down(self, touch):
-		print 'Pert part touched!\n'
-		self.isSelected = True
+class PertWidget(DragBehavior, Widget):
+	 def __init__(self, **kwargs):
+	 	super(PertWidget, self).__init__(**kwargs)
 		with self.canvas:
 			Color(1, 1, 0)
 			d = 30.
-			Ellipse(pos=(touch.x - d / 2, touch.y - d / 2), size=(d, d))
+			Ellipse(pos=(100 - d / 2, 100 - d / 2), size=(d, d))
 
 class MainWindow(BoxLayout):
 	def addPressed(self):

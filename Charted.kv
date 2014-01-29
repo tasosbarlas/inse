@@ -5,7 +5,10 @@
 	anchor_y: 'center'
 	Label:
 		text: 'This is where PERT is'
-	PertWidget
+	PertWidget:
+		drag_rectangle: self.x, self.y + 100, self.width, self.height - 100
+		drag_timeout: 10000000 
+		drag_distance: 0
 	
 <GanttBoard>:
 	orientation: 'vertical'
@@ -69,7 +72,7 @@
 	        GanttBoard
 
 	    TabbedPanelItem:
-			disabled: True
+			disabled: False
 	        text: 'PERT'
 	        PertBoard
 
