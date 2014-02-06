@@ -1,0 +1,149 @@
+#-------------------------------------------------------------------------------
+#INSE Coursework
+# Lead Programmer:Anastasios Barlas
+# 662987
+# Autumn Teaching Block 2012
+#-------------------------------------------------------------------------------
+
+from math import *
+import time
+from datetime import *
+import calendar
+
+
+class inputdata:
+
+
+# The name of  each individual task
+    def taskName():
+    task = list()
+    print("Enter the name of the task")
+    while True
+        task1 = input("Enter the name of the task")
+        if not task1.isdigit():
+            task.append(task1)
+            newtask = input("Do you want to add another task?Type yes or no").lower()
+            while newtask != "no"
+                task.append(newtask)
+        else
+            print("Invalid task name.Type a string task name")
+
+
+
+
+    def datelist():
+        chars = set('0123456789,')
+        tasklist = list()
+        startdate = input("Please insert the starting date in YY,MM,dd format")
+        enddate = input("Please insert the last date in YY,MM,dd format")
+        while True:
+            if not any((c in chars)for c in startdate)
+            startdate = input("Only digits can be accepted for the starting date")
+            else:
+                break
+            if not any((c in chars)for c in enddate)
+            enddate = input("Only digits can be accepted for the end date")
+            else:
+                break
+        listodaysf = [d1 + timedelta(days=x) for x in range((d2-d1).days + 1)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Specific start and end dates of each activity
+    def datesOfActivities():
+
+
+
+
+
+
+# Length in time of each activity
+    def length():
+
+
+
+
+
+
+# Define if an activity overlaps with other activities,and if it does,
+# it defines by how much
+    def overlap():
+
+
+
+
+
+
+# Start and end dates of the whole project are being specified here
+    def datesOfProject():
+
+
+
+
+class GanttChart():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class PertChart():
+
+
+def criticalpath():
+
+
+
+
+def bottlenecks():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class WBT():
